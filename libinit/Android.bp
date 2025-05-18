@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_salaa",
+    recovery_available: true,
+    srcs: [
+        "init.cpp"
+    ],
+    include_dirs: [
+        "system/core/init"
+    ],
+    shared_libs: [
+        "libbase",
+        "libfs_mgr"
+    ]
+}

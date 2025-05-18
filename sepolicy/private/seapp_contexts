@@ -1,0 +1,5 @@
+#TurboAdapter
+user=_app seinfo=platform name=com.google.android.turboadapter domain=turbo_adapter type=app_data_file levelFrom=all
+
+# Oplus Camera
+user=_app seinfo=platform name=com.oplus.camera domain=opluscamera_app type=opluscamera_app_data_file

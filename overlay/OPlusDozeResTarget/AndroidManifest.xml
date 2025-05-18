@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="org.lineageos.settings.doze.overlay.oplus.target">
+
+    <application android:hasCode="false"/>
+    <overlay 
+          android:isStatic="true" 
+          android:priority="6969" 
+          android:targetPackage="org.lineageos.settings.doze" />
+</manifest>

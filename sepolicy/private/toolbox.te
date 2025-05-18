@@ -1,0 +1,2 @@
+allow toolbox resourcecache_data_file:dir { getattr open read write setattr rmdir search };
+allow toolbox resourcecache_data_file:file { getattr open read write };

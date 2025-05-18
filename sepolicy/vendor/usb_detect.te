@@ -1,0 +1,6 @@
+type usb_detect, domain;
+type usb_detect_exec, exec_type, vendor_file_type,file_type;
+
+init_daemon_domain(usb_detect)
+
+set_prop(usb_detect, build_prop)

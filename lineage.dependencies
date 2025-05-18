@@ -1,0 +1,32 @@
+[
+  {
+    "remote"      : "github",
+    "repository"  : "Luks-organization/vendor_realme_salaa",
+    "branch"      : "fifteen-f11",
+    "target_path" : "vendor/realme/salaa"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "Luks-organization/kernel_realme_salaa",
+    "branch"      : "fifteen",
+    "target_path" : "kernel/realme/salaa"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "Luks-organization/device-mediatek-sepolicy_vndr",
+    "branch"      : "fifteen",
+    "target_path" : "device/mediatek/sepolicy_vndr"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "StimLuks87/android_hardware_oplus",
+    "branch"      : "lineage-22.2",
+    "target_path" : "hardware/oplus"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "Luks-organization/android_hardware_mediatek",
+    "branch"      : "lineage-22.2",
+    "target_path" : "hardware/mediatek"
+  }
+]

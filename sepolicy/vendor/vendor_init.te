@@ -1,0 +1,47 @@
+# schedtune
+allow vendor_init device:file { create read write };
+
+# Dalvik
+set_prop(vendor_init, dalvik_config_prop)
+
+# Allow vendor_init to read cabc prop
+get_prop(vendor_init, cabc_prop)
+
+# Allow vendor_init to read system vib strength prop
+get_prop(vendor_init, vib_strength_prop)
+
+# Vibrate
+allow vendor_init vendor_userdir_file:dir rw_file_perms;
+
+# Allow Vendor_init set Radio Prop
+set_prop(vendor_init, vendor_radio_prop)
+
+# Oplus Touch
+allow vendor_init proc_tp:file rw_file_perms;
+
+get_prop(vendor_init, vendor_variant_prop)
+rw_dir_file(vendor_init, sysfs_leds)
+
+allow vendor_init nfc_data_vendor_file:dir { r_dir_perms create_dir_perms };
+allow vendor_init vendor_proc_display:file rw_file_perms;
+allow vendor_init vendor_proc_decimal:file w_file_perms;
+
+allow vendor_init proc_sched_stune:file w_file_perms;
+allow vendor_init proc_vm_dirty:file w_file_perms;
+
+allow vendor_init vendor_sysfs_usb_supply:file w_file_perms;
+allow vendor_init vendor_sysfs_otg_switch:file w_file_perms;
+allow vendor_init vendor_sysfs_usb_supply:dir search;
+allow vendor_init vts_status_prop:file read;
+allow vendor_init vendor_userdir_file:dir add_name;
+
+allow vendor_init bluetooth_prop:property_service set;
+allow vendor_init default_prop:property_service set;
+allow vendor_init exported_system_prop:property_service set;
+allow vendor_init vendor_mtk_telephony_addon_prop:property_service set;
+allow vendor_init mtk_radio_device:lnk_file unlink;
+allow vendor_init proc:file w_file_perms;
+allow vendor_init radio_prop:file r_file_perms;
+allow vendor_init radio_prop:property_service set;
+
+set_prop(vendor_init, vendor_power_prop)

@@ -1,0 +1,5 @@
+OPLUSExService                          u:object_r:OPLUSExService_service:s0
+app_compatibility                       u:object_r:app_compatibility_service:s0
+
+# Camera
+oplusoiface                             u:object_r:oplusoiface_service:s0

@@ -1,0 +1,10 @@
+# Allow health HAL to access relevant sysfs nodes
+allow hal_health_default vendor_sysfs_usb_supply:file { getattr open read };
+allow hal_health_default vendor_sysfs_usb_supply:dir search;
+allow hal_health_default vendor_sysfs_battery_supply:file { getattr open read };
+allow hal_health_default vendor_sysfs_battery_supply:dir search;
+allow hal_health_default vendor_sysfs_ac_supply:file { getattr open read };
+allow hal_health_default vendor_sysfs_ac_supply:dir search;
+allow hal_health_default sysfs_batteryinfo:file { getattr open read };
+allow hal_health_default sysfs_batteryinfo:dir search;
+allow hal_health_default sysfs:file read;

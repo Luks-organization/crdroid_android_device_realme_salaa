@@ -1,0 +1,11 @@
+allow untrusted_app_32 proc_cpufreq:dir { search };
+allow untrusted_app_32 proc_mtktz:dir { search read };
+allow untrusted_app_32 nvdata_file:dir { getattr };
+allow untrusted_app_32 protect_f_data_file:dir { getattr };
+allow untrusted_app_32 protect_s_data_file:dir { getattr };
+allow untrusted_app_32 sysfs_soc:dir { search };
+allow untrusted_app_32 sysfs_gpu:dir { search };
+allow untrusted_app_32 zygote:unix_stream_socket getopt;
+allow untrusted_app_32 mnt_vendor_file:dir search;
+allow untrusted_app_32 proc_net_tcp_udp:file r_file_perms;
+allow untrusted_app_32 proc_version:file r_file_perms;

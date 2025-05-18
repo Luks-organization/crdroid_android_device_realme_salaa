@@ -1,0 +1,7 @@
+# Dolby
+allow priv_app hal_dms_hwservice:hwservice_manager find;
+binder_call(priv_app, hal_dms_default)
+
+allow priv_app proc_filesystems:file { open read };
+allow priv_app zygote:unix_stream_socket getopt;
+allow priv_app metadata_file:dir { open read };

@@ -1,0 +1,1 @@
+allow power_off_alarm default_prop:file r_file_perms;

@@ -1,0 +1,219 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "factory_init.connectivity.common.rc",
+    src: "factory_init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.connectivity.rc",
+    src: "factory_init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.project.rc",
+    src: "factory_init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.rc",
+    src: "factory_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.power.rc",
+    src: "init.mt6785.power.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "init.modem.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.rc",
+    src: "init.mt6785.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.usb.rc",
+    src: "init.mt6785.usb.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.nfc_detect.rc",
+    src: "init.nfc_detect.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.sensor_1_0.rc",
+    src: "init.sensor_1_0.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "init_connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.connectivity.common.rc",
+    src: "meta_init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.connectivity.rc",
+    src: "meta_init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.modem.rc",
+    src: "meta_init.modem.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.project.rc",
+    src: "meta_init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.rc",
+    src: "meta_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "multi_init.rc",
+    src: "multi_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "fstab.mt6785",
+    src: "fstab.mt6785",
+    vendor: true,
+    required: ["fstab.mt6785_ramdisk"],
+}
+
+prebuilt_etc {
+    name: "fstab.mt6785_ramdisk",
+    src: "fstab.mt6785",
+    filename_from_src: true,
+    ramdisk: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.oplus.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.oplus.rc",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.mtk.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.mtk.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    product_specific: true,
+    relative_install_path: "init",
+}
+
+prebuilt_etc {
+    name: "init.camera_update.rc",
+    src: "init.camera_update.rc",
+    device_specific: true,
+    relative_install_path: "init",
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6785.rc",
+    src: "init.recovery.mt6785.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.usb_detect.rc",
+    src: "init.usb_detect.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+sh_binary {
+    name: "target.sh",
+    src: "target.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "nfc_detect.sh",
+    src: "nfc_detect.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "usb_detect.sh",
+    src: "usb_detect.sh",
+    vendor: true,
+}

@@ -1,0 +1,32 @@
+add_hwservice(mtk_hal_camera, hal_camera_oplus_hwservice)
+
+allow mtk_hal_camera oplus_hal_ormsHal_hwservice:hwservice_manager find;
+allow mtk_hal_camera hal_performance_oplus_hwservice:hwservice_manager find;
+allow mtk_hal_camera exported_system_prop:property_service set;
+allow mtk_hal_camera vendor_persist_camera_file:dir rw_dir_perms;
+allow mtk_hal_camera vendor_persist_camera_file:file create_file_perms;
+allow mtk_hal_camera vendor_camera_update_data_file:dir rw_dir_perms;
+allow mtk_hal_camera vendor_camera_update_data_file:file create_file_perms;
+allow mtk_hal_camera persist_data_file:dir { search };
+allow mtk_hal_camera proc_sched_assist:file rw_file_perms;
+allow mtk_hal_camera default_prop:file r_file_perms;
+allow mtk_hal_camera system_prop:file r_file_perms;
+allow mtk_hal_camera system_oplus_project_prop:file r_file_perms;
+allow mtk_hal_camera unlabeled:dir search;
+allow mtk_hal_camera unlabeled:dir { add_name write };
+allow mtk_hal_camera unlabeled:file { create getattr setattr open read write };
+allow mtk_hal_camera vendor_xdsp_device:chr_file r_file_perms;
+allow mtk_hal_camera vendor_camera_prop:file { open read };
+allow mtk_hal_camera vendor_camera_prop:property_service set;
+
+r_dir_file(mtk_hal_camera, proc_boost_pool)
+r_dir_file(mtk_hal_camera, proc_sched_assist)
+r_dir_file(mtk_hal_camera, proc_version)
+r_dir_file(mtk_hal_camera, vendor_proc_oplus_version)
+
+set_prop(mtk_hal_camera, vendor_oplus_prop)
+get_prop(mtk_hal_camera, system_oplus_camera_prop)
+
+r_dir_file(mtk_hal_camera, vendor_proc_oplus_version)
+binder_call(mtk_hal_camera, mtk_hal_mmagent)
+hal_client_domain(mtk_hal_camera, hal_mtk_mmagent)

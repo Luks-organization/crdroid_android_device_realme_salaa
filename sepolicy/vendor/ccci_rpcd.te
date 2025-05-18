@@ -1,0 +1,2 @@
+allow ccci_rpcd default_prop:file r_file_perms;
+allow ccci_rpcd vendor_radio_prop:file r_file_perms;

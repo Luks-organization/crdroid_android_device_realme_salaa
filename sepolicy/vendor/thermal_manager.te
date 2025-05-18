@@ -1,0 +1,2 @@
+allow thermal_manager vendor_thermal_prop:file { getattr open read map };
+get_prop(thermal_manager, vendor_thermal_prop)

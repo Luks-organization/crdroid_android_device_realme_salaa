@@ -1,0 +1,11 @@
+cc_library_shared {
+    name: "aedv_shim",
+    srcs: ["aedv_shim.c"],
+    vendor: true,
+}
+
+cc_library_shared {
+    name: "aedv64_shim",
+    srcs: ["aedv64_shim.c"],
+    vendor: true,
+}

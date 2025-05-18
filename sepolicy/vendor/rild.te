@@ -1,0 +1,12 @@
+set_prop(rild, vendor_mtk_gwsd_capability_prop)
+set_prop(rild, vendor_mtk_telephony_addon_prop)
+set_prop(rild, vendor_mtk_mdrsra_v2_support_prop)
+set_prop(rild, vendor_mtk_xfrm_support_prop)
+set_prop(rild, vendor_mtk_md_prop)
+set_prop(rild, vendor_nw_exported_system_prop)
+get_prop(rild, vendor_rild_libpath_prop)
+
+allow rild vendor_radio_prop:file r_file_perms;
+allow rild vendor_proc_display:file r_file_perms;
+allow rild mnt_vendor_file:dir search;
+r_dir_file(rild, vendor_proc_engineer)

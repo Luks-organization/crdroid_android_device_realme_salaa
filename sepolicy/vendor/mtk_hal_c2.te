@@ -1,0 +1,2 @@
+allow mtk_hal_c2 sysfs_boot_mode:file { getattr open read };
+allow mtk_hal_c2 default_prop:file { getattr open read map };

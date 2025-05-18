@@ -1,0 +1,62 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+    imports: [
+        "bootable/deprecated-ota",
+        "hardware/oplus",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_dmc_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.dmc@1.0::IDmcService",
+         "vendor.mediatek.hardware.dmc@1.1::IDmcService",
+         "vendor.mediatek.hardware.dmc@1.2::IDmcService",
+     ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_apmonitor_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.apmonitor@2.0::IApmService",
+     ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_log_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.log@1.0::ILog",
+     ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_mdmonitor_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.mdmonitor@1.0::IMDMonitorService",
+     ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_atci_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.atci@1.0::IAtcid",
+     ],
+}
+
+prebuilt_hidl_interfaces {
+     name: "hidl_engineermode_interface",
+     interfaces: [
+         "vendor.mediatek.hardware.engineermode@1.0::IEmd",
+         "vendor.mediatek.hardware.engineermode@1.1::IEmd",
+         "vendor.mediatek.hardware.engineermode@1.2::IEmd",
+         "vendor.mediatek.hardware.engineermode@1.3::IEmd",
+     ],
+}
+
+cc_library_shared {
+    name: "libldacBT_bco",
+}

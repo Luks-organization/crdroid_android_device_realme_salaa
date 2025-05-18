@@ -1,0 +1,8 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on early-init
+    exec u:r:usb_detect:s0 -- /vendor/bin/usb_detect.sh
+    setprop vendor.usb.product_string  ${ro.product.marketname}

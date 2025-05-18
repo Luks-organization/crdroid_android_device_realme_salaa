@@ -1,0 +1,2 @@
+allow hal_vibrator_default input_device:dir { search read write open map };
+allow hal_vibrator_default input_device:chr_file { read write open map ioctl };

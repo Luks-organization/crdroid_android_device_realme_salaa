@@ -1,0 +1,2 @@
+type opluscamera_app, domain, mlstrustedsubject;
+typeattribute opluscamera_app mlstrustedsubject;

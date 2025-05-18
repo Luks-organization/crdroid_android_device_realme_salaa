@@ -1,0 +1,3 @@
+allow ipsec sysfs_wake_lock:file { open read write };
+allow ipsec self:capability2 block_suspend;
+allow ipsec self:capability dac_override;

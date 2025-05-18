@@ -1,0 +1,68 @@
+# Camera
+type vendor_proc_flash, fs_type, proc_type;
+type proc_boost_pool, fs_type, proc_type;
+type vendor_camera_update_data_file, file_type, data_file_type;
+type vendor_persist_camera_file, file_type;
+type public_adsprpcd_file, file_type;
+type adsprpcd_file, file_type;
+type vendor_camera_data_file, file_type, data_file_type;
+
+# Charging
+type vendor_sysfs_ac_supply, fs_type, sysfs_type;
+type vendor_sysfs_battery_supply, fs_type, sysfs_type;
+type vendor_proc_batt_param, fs_type, proc_type;
+type vendor_proc_charger, fs_type, proc_type;
+type vendor_proc_decimal, fs_type, proc_type;
+type vendor_proc_devinfo_fastchg, fs_type, proc_type;
+type vendor_proc_fw_update, fs_type, proc_type;
+type vendor_proc_tbatt_pwroff, fs_type, proc_type;
+type vendor_proc_wireless, fs_type, proc_type;
+type vendor_firmware_file, vendor_file_type, file_type;
+type sysfs_chargelevel, sysfs_type, fs_type;
+
+# Display
+type vendor_sysfs_graphics, fs_type, sysfs_type;
+type vendor_proc_display, fs_type, proc_type;
+
+# Oplus Touch
+type proc_tp, fs_type, proc_type;
+
+# Fingerprint
+type factorytestreport_vendor_data_file, data_file_type, file_type;
+type oplus_fingerprint_file, data_file_type, file_type;
+type sysfs_fingerprint, fs_type, sysfs_type;
+type vendor_proc_fingerprint, fs_type, proc_type;
+
+# NFC
+type vendor_proc_nfc_chipset, fs_type, proc_type;
+
+# OTG
+type vendor_sysfs_otg_switch, fs_type, sysfs_type;
+
+# PPS
+type pps_socket, file_type;
+
+# Sensors
+type vendor_proc_oplus_sensor_feature, fs_type, proc_type;
+type vendor_proc_oplus_sensor_param, fs_type, proc_type;
+type vendor_sysfs_oplus_virtual_sensor, fs_type, sysfs_type;
+type vendor_proc_oplus_sensor_cali, fs_type, proc_type;
+type vendor_proc_oplus_sensor_als, fs_type, proc_type;
+type oplus_sensor_file, data_file_type, file_type;
+type vendor_persist_oplus_touch_file, file_type, data_file_type;
+
+# Oplus Version
+type vendor_proc_oplus_version, fs_type, proc_type;
+
+# Engineer Mode
+type vendor_proc_engineer, fs_type, proc_type;
+type vendor_persist_engineer_file, file_type;
+
+# Performance
+type proc_sched_stune, fs_type, proc_type;
+type proc_sched_assist, fs_type, proc_type;
+type sysfs_mtk_cpufreq, fs_type, sysfs_type;
+type sysfs_mtk_gpufreq, fs_type, sysfs_type;
+
+# GPU
+type proc_gpufreq, fs_type, proc_type;

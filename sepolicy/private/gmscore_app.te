@@ -1,0 +1,12 @@
+allow gmscore_app system_adbd_prop:file { getattr open read map };
+allow gmscore_app file_contexts_file:file getattr;
+allow gmscore_app hwservice_contexts_file:file getattr;
+allow gmscore_app init_exec:lnk_file getattr;
+allow gmscore_app keystore2_key_contexts_file:file getattr;
+allow gmscore_app linkerconfig_file:dir getattr;
+allow gmscore_app mac_perms_file:file getattr;
+allow gmscore_app metadata_file:dir getattr;
+allow gmscore_app mirror_data_file:dir getattr;
+allow gmscore_app oem_unlock_prop:file read;
+allow gmscore_app postinstall_mnt_dir:dir getattr;
+allow gmscore_app seapp_contexts_file:file getattr;

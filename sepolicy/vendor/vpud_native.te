@@ -1,0 +1,3 @@
+allow vpud_native vendor_thermal_prop:file { getattr read map };
+allow vpud_native default_prop:file { getattr read map };
+allow vpud_native proc_thermal:dir search;
