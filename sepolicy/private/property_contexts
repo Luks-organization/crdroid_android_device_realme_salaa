@@ -94,8 +94,8 @@ persist.vendor.audiohal.aurisys.pcm_dump_on      u:object_r:exported_system_prop
 persist.vendor.audiohal.p2w_dump_on              u:object_r:exported_system_prop:s0
 persist.vendor.audiohal.pcm_mixer_dump_on        u:object_r:exported_system_prop:s0
 
-#Infinity Specific
-#ro.infinity.version	                         u:object_r:build_prop:s0
+# crDroid Specific
+ro.crdroid.build.version	                 u:object_r:build_prop:s0
 
 # Touch
 persist.sys.tpic.                                u:object_r:system_oplus_touch_prop:s0

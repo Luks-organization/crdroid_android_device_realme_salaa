@@ -11,14 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common DerpFest OS stuff.
+# Inherit some common crDroid OS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # ViperFX
 $(call inherit-product-if-exists, vendor/ViperFX/ViperFX.mk)
-
-# Mind Gapps
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Priv Keys
 -include vendor/lineage-priv/keys/keys.mk
@@ -31,9 +28,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# GMS
-WITH_GMS := true
 
 # Device Information
 PRODUCT_DEVICE := salaa

@@ -21,7 +21,7 @@ unzip vendor/realme/salaa/radio/md1img.zip -d vendor/realme/salaa/radio && rm ve
 unzip vendor/realme/salaa/proprietary/odm/lib64/libstfaceunlockppl.zip -d vendor/realme/salaa/proprietary/odm/lib64 && rm vendor/realme/salaa/proprietary/odm/lib64/libstfaceunlockppl.zip
 
 # Hardware Oplus:
-git clone https://github.com/Luks-organization/Lineage_android_hardware_oplus hardware/oplus
+git clone https://github.com/crdroidandroid/android_hardware_oplus hardware/oplus
 
 # Hardware Mediatek:
 git clone https://github.com/Luks-organization/android_hardware_mediatek hardware/mediatek
