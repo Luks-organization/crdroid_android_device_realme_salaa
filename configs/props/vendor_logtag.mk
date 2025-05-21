@@ -263,4 +263,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GED=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.libperfmgr=$(VENDOR_LOG_LEVEL) \
-    persist.log.tag.perf_hint=$(VENDOR_LOG_LEVEL)
+    persist.log.tag.perf_hint=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.ULogGuard=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.ConstraintSet=$(VENDOR_LOG_LEVEL)

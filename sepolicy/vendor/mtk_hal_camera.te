@@ -16,7 +16,7 @@ allow mtk_hal_camera unlabeled:dir search;
 allow mtk_hal_camera unlabeled:dir { add_name write };
 allow mtk_hal_camera unlabeled:file { create getattr setattr open read write };
 allow mtk_hal_camera vendor_xdsp_device:chr_file r_file_perms;
-allow mtk_hal_camera vendor_camera_prop:file { open read };
+allow mtk_hal_camera vendor_camera_prop:file { getattr open read map };
 allow mtk_hal_camera vendor_camera_prop:property_service set;
 
 r_dir_file(mtk_hal_camera, proc_boost_pool)

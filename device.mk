@@ -201,7 +201,8 @@ PRODUCT_PACKAGES += \
     libcamera_metadata_shim \
     libsensors_shim \
     libui_shim \
-    libbase_shim
+    libbase_shim \
+    libbinder_shim
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -224,8 +225,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery \
-    android.hardware.health@2.1.vendor \
-    charger_res_images_vendor
+    android.hardware.health-V1-ndk \
+    android.hardware.health@2.1
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
@@ -475,7 +480,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi-service-lazy \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl \
     libwifi-hal-wrapper \

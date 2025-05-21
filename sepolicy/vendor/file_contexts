@@ -184,7 +184,7 @@
 /data/vendor/dolby(/.*)?                                                                                               u:object_r:vendor_data_file:s0
 
 # Wifi
-/vendor/bin/hw/android\.hardware\.wifi-service                                                                         u:object_r:hal_wifi_default_exec:s0
+/vendor/bin/hw/android\.hardware\.wifi-service-lazy                                                                    u:object_r:hal_wifi_default_exec:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                               u:object_r:hal_dms_default_exec:s0

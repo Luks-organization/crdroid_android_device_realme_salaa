@@ -340,6 +340,18 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- Set to true if the wifi display supports compositing content stored
+         in gralloc protected buffers.  For this to be true, there must exist
+         a protected hardware path for surface flinger to composite and send
+         protected buffers to the wifi display video encoder.
+         If this flag is false, we advise applications not to use protected
+         buffers (if possible) when presenting content to a wifi display because
+         the content may be blanked.
+         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
+         flag is set for wifi displays.
+    -->
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+
     <!-- Battery health -->
     <bool name="config_supportBatteryHealth">true</bool>
     <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/battery/charge_full</string>
@@ -427,10 +439,6 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_displayBrightnessBucketsInDoze">true</bool>
- 
-    <!-- Control whether the always on display mode is enabled by default. This value will be used
-         during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>

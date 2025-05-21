@@ -21,7 +21,7 @@ unzip vendor/realme/salaa/radio/md1img.zip -d vendor/realme/salaa/radio && rm ve
 unzip vendor/realme/salaa/proprietary/odm/lib64/libstfaceunlockppl.zip -d vendor/realme/salaa/proprietary/odm/lib64 && rm vendor/realme/salaa/proprietary/odm/lib64/libstfaceunlockppl.zip
 
 # Hardware Oplus:
-git clone https://github.com/crdroidandroid/android_hardware_oplus hardware/oplus
+git clone https://github.com/Luks-organization/crDroid_android_hardware_oplus hardware/oplus
 
 # Hardware Mediatek:
 git clone https://github.com/Luks-organization/android_hardware_mediatek hardware/mediatek
@@ -39,16 +39,13 @@ git clone https://github.com/Luks-organization/RealmeParts packages/apps/RealmeP
 git clone https://github.com/Luks-organization/ViperFX vendor/ViperFX
 
 # Apply vndk patch
-#cd device/realme/salaa/patches && ./apply.sh && cd && cd evo
+#cd device/realme/salaa/patches && ./apply.sh && cd && cd crDroid
 
 # CameraGo:
 #git clone https://github.com/Luks-organization/CameraGo vendor/CameraGo
 
 # CameraGo:
 #unzip vendor/CameraGo/CameraGo/CameraGo.zip -d vendor/CameraGo/CameraGo && rm vendor/CameraGo/CameraGo/CameraGo.zip
-
-# OplusDolby:
-#git clone https://github.com/Luks-organization/DolbyManager packages/apps/OplusDolby
 
 # Clang:
 #git clone --depth=1 https://gitlab.com/RismaPwd/clang toolchain/clang-proton

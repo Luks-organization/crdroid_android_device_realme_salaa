@@ -1,2 +1,3 @@
 allow isolated_app app_data_file:file setattr;
 allow isolated_app opluscamera_app_data_file:file { read write };
+allow isolated_app content_capture_service:service_manager find;

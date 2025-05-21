@@ -33,54 +33,26 @@ namespace_imports = [
 	'hardware/oplus',
 ]
 
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    if partition.startswith('_'):
-        partition = partition[1:]  # Remove leading underscore
-
-    if partition not in ('vendor', 'system_ext'):
-        return None
-
-    return f'{lib}_{partition}'
-
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    ('vendor.mediatek.hardware.lbs@1.0',): lib_fixup_vendor_suffix,
-
-}
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'odm' else None
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    if partition.startswith('_'):
-        partition = partition[1:]  # Remove leading underscore
-
-    if partition not in ('vendor', 'system'):
-        return None
-
-    return f'{lib}_{partition}'
+    return f'{lib}_{partition}' if partition == 'vendor' else None
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-     'vendor.oplus.hardware.performance@1.0',
-     'vendor.mediatek.hardware.videotelephony@1.0',
-     'vendor.oplus.hardware.commondcs@1.0',
-     'libremosaiclib',
-     'libremosaic_wrapper',
-     'libhwm-oplus',
+        'vendor.oplus.hardware.biometrics.fingerprint@2.1',
+    ): lib_fixup_odm_suffix,
+    (
+        'vendor.mediatek.hardware.lbs@1.0',
+        'vendor.oplus.hardware.performance@1.0',
+        'vendor.mediatek.hardware.videotelephony@1.0',
+        'vendor.oplus.hardware.commondcs@1.0',
+        'libremosaiclib',
+        'libremosaic_wrapper',
+        'libhwm-oplus',
     ): lib_fixup_vendor_suffix,
-}
-
-def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
-    if partition.startswith('_'):
-        partition = partition[1:]  # Remove leading underscore
-
-    if partition not in ('odm', 'vendor'):
-        return None
-
-    return f'{lib}_{partition}'
-
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    ('vendor.oplus.hardware.biometrics.fingerprint@2.1',): lib_fixup_odm_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -165,13 +137,16 @@ blob_fixups: blob_fixups_user_type = {
        .add_needed('aedv_shim.so'),
     'vendor/bin/aee_aedv64': blob_fixup()
        .add_needed('aedv64_shim.so'),
+    'system_ext/bin/kpoc_charger': blob_fixup()
+       .add_needed('libbinder_shim.so'),
+    'vendor/bin/hw/camerahalserver': blob_fixup()
+       .replace_needed('libutils.so', 'libutils-v31.so'),
     'vendor/lib64/libsingle_camera_bokeh_native.so': blob_fixup()
-        .clear_symbol_version('AHardwareBuffer_allocate')
-        .clear_symbol_version('AHardwareBuffer_describe')
-        .clear_symbol_version('AHardwareBuffer_lock')
-        .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock'),
-
+       .clear_symbol_version('AHardwareBuffer_allocate')
+       .clear_symbol_version('AHardwareBuffer_describe')
+       .clear_symbol_version('AHardwareBuffer_lock')
+       .clear_symbol_version('AHardwareBuffer_release')
+       .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
