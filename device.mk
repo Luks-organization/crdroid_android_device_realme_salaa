@@ -226,7 +226,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery \
     android.hardware.health-V1-ndk \
-    android.hardware.health@2.1
+    android.hardware.health@2.0
 
 # Charger
 PRODUCT_PACKAGES += \
